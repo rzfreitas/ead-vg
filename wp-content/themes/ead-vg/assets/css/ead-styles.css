@@ -1,0 +1,254 @@
+/* FONTS-TEXTING */
+body{
+	font-family: 'Montserrat', sans-serif;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6{
+	display: block;
+	margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h1 { 
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+h2 {
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;    
+}
+h3 {
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h4 {
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+}
+h5 { 
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+}
+h6 {
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+}
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+ul{
+	margin: 0;
+	padding-left: 15px;}
+/* / */
+
+/* HEADER */
+.ead-header{
+	padding-top: 15px;
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+	transition: .3s;
+}
+.site-content{
+	padding-top: 87px;
+}
+.black-header{
+	background: #eee;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,.22);
+}
+/* / */
+
+/* HOME */
+.bg-azul{
+	background: #40A3C1;
+	color: #fff;
+}
+.box-w-round-t{
+	background: #fff;
+	padding: 40px;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px;
+}
+.box-w-round-b{
+	background: #fff;
+	padding: 40px;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+.box-combo{
+	background: rgba(2, 1, 6, 0.7);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	box-sizing: border-box;
+	border-radius: 130px 0px 107px;
+	color: #6FCF97;
+	padding: 40px;
+	width: 396px;
+	margin: 0 auto;
+}
+.text-hide{display: none;}
+.show-hide-text{display: block;}
+.show-hide-text p{
+	font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Ubuntu', sans-serif;
+}
+ul.funcs{
+	list-style: none;
+}
+ul.funcs li{
+	display: inline-flex;
+	display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+}
+/* / */
+
+/* FAQ */
+.faq h2{
+	font-size: 36px;
+	color: #40A3C1;
+}
+.bg-plano{
+	background-image: url(../imagens/plano-ead.png);
+    min-height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+}
+/* / */
+
+/* FOOTER */
+.title-blog-vg{
+	text-align: center;
+	font-size: 36px;
+	background-color: #C4C4C4;
+	color: #fff;
+	padding: 15px 0;
+}
+.n-footer {
+	background-color:#40A3C1;
+	color:#fff;
+	padding: 0 0 50px 0;
+}
+
+.block-links {
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	margin-bottom: 20px;
+	margin-top: 40px;
+	padding: 20px 0;
+}
+.block-links h3{margin-top: 0}
+
+.n-footer .links ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:left
+}
+
+.n-footer .links ul li {
+	margin-bottom:0;
+	line-height:1.5
+}
+
+.n-footer a {
+	color:#fff;
+}
+
+.n-footer p {
+	line-height:1.5;
+	margin-bottom:0
+}
+
+.social-footer ul {
+	list-style:none;
+	margin:0;
+	padding:0
+}
+
+.social-footer li {
+	display:inline
+}
+
+.icons-social i {
+	background-color:rgba(255,255,255,.3);
+	border-radius:50px;
+	height:32px;
+	width:32px;
+	cursor:pointer;
+	text-align:center
+}
+
+.icons-social i::before {
+	font-size:20px;
+	line-height:1.5;
+	color:#005F73
+}
+
+.icons-social i:hover {
+	background-color:#fff
+}
+.logo-footer{
+	position: relative;
+    top: -55px;
+}
+/* /FOOTER */
+
+/* BUTTONS */
+.btn{
+	display: inline-block;
+	border-radius: 30px;
+	transition: .3s;
+	padding: 8px 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+.btn-amarelo{
+	background: #FFAA1C;
+	color: #fff;
+	font-size: 14px;
+}
+.btn-branco{
+	background: #fff;
+	font-size: 14px;
+}
+a.btn-amarelo{color: #fff;}
+a.btn-branco{color: #2F80ED;}
+/* / */
+
+/* UTILS */
+.float-right{float: right;}
+.float-left{float: left;}
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+.no-m{margin: 0}
+.p-relative{position: relative;}
+.p-t-25{padding-top: 25px;}
+.p-b-25{padding-bottom: 25px;}
+.p-t-50{padding-top: 50px;}
+.p-b-50{padding-bottom: 50px;}
+.p-t-100{padding-top: 100px;}
+.p-b-100{padding-bottom: 100px;}
+.m-t-50{margin-top: 50px;}
+.uppercase{text-transform: uppercase;}
+.d-inline-flex{
+	display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+.d-flex{
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+/* / */
