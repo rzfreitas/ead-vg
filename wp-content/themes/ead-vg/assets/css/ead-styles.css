@@ -251,4 +251,9 @@ a.btn-branco{color: #2F80ED;}
     display: -webkit-flex;
     display: flex;
 }
+.v-center{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
 /* / */
