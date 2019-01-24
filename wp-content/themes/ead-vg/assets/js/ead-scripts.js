@@ -12,3 +12,9 @@ jQuery('#leiaMais').on('click', function(e) {
   jQuery('.text-hide').toggleClass("show-hide-text");
   e.preventDefault();
 });
+
+jQuery('.banner-home').slick({
+    dots: true,
+  	infinite: true,
+  	autoplay: true,
+});

@@ -2,6 +2,35 @@
 get_header(); ?>
 
 <section>
+	<div class="container">
+		<?php if( have_rows('slide_banner') ): ?>
+			<ul class="banner-home">
+			<?php while( have_rows('slide_banner') ): the_row(); 
+				// vars
+				$title = get_sub_field('titulo');
+				$image = get_sub_field('img_banner');
+				$content = get_sub_field('text_banner');
+				$link = get_sub_field('link_btn'); ?>
+
+				<li class="slide">
+					<div class="row">
+						<div class="col-7">
+							<h1><?php echo $title; ?></h1>
+							<p><?php echo $content; ?></p>
+							<a class="btn btn-azul" href="<?php echo $link; ?>">Comece já!</a>
+						</div>
+						<div class="col-5">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+						</div>
+					</div>
+				</li>
+			<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
+	</div>
+</section>
+
+<section>
 <div class="bg-plano">
 	<div class="container">		
 		<div class="box-w-round-b">
