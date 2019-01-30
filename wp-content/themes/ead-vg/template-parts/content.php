@@ -36,7 +36,7 @@
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ead-vg' ),
+				__( 'Continue lendo<span class="screen-reader-text"> "%s"</span>', 'ead-vg' ),
 				array(
 					'span' => array(
 						'class' => array(),

@@ -26,7 +26,7 @@ if ( ! function_exists( 'ead_vg_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'ead-vg' ),
+			esc_html_x( 'Data %s', 'post date', 'ead-vg' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'ead_vg_posted_by' ) ) :
 	function ead_vg_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'ead-vg' ),
+			esc_html_x( 'por %s', 'post author', 'ead-vg' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -62,7 +62,7 @@ if ( ! function_exists( 'ead_vg_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'ead-vg' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'ead-vg' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted em %1$s', 'ead-vg' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
@@ -79,7 +79,7 @@ if ( ! function_exists( 'ead_vg_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'ead-vg' ),
+						__( 'Deixe um comentário<span class="screen-reader-text"> on %s</span>', 'ead-vg' ),
 						array(
 							'span' => array(
 								'class' => array(),

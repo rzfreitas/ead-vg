@@ -18,3 +18,7 @@ jQuery('.banner-home').slick({
   	infinite: true,
   	autoplay: true,
 });
+
+jQuery('.click-faq').click(function() {
+  $(this).next().toggleClass('d-none');
+});

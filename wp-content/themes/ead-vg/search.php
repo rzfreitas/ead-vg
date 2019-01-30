@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area container p-t-50 p-b-100">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -19,9 +19,10 @@ get_header();
 				<h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'ead-vg' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Resultados para: %s', 'ead-vg' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
+				<hr>
 			</header><!-- .page-header -->
 
 			<?php
@@ -51,5 +52,5 @@ get_header();
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

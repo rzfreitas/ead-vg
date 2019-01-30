@@ -164,6 +164,8 @@ function add_theme_scripts() {
 
 	wp_enqueue_style( 'bootstrap-grid', get_template_directory_uri() . '/assets/css/bootstrap-grid.min.css', array(), 'all', 'all');
 
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/all.css', array(), 'all', 'all');
+
 	wp_enqueue_style( 'ead-styles', get_template_directory_uri() . '/assets/css/ead-styles.css', array(), 'all', 'all');
  
 	wp_enqueue_script( 'jquery-slim', get_template_directory_uri() . '/assets/js/jquery-v3.3.1-slim.js', array (), all, true);

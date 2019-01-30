@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <section>
-	<div class="container">
+	<div class="container p-t-50">
 		<?php if( have_rows('slide_banner') ): ?>
 			<ul class="banner-home">
 			<?php while( have_rows('slide_banner') ): the_row(); 
@@ -13,13 +13,13 @@ get_header(); ?>
 				$link = get_sub_field('link_btn'); ?>
 
 				<li class="slide">
-					<div class="row">
-						<div class="col-7">
+					<div class="dp-flex">
+						<div class="w-60 p-l-70">
 							<h1><?php echo $title; ?></h1>
 							<p><?php echo $content; ?></p>
 							<a class="btn btn-azul" href="<?php echo $link; ?>">Comece já!</a>
 						</div>
-						<div class="col-5">
+						<div class="w-40 p-s-15 img-slide">
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 						</div>
 					</div>
@@ -27,6 +27,20 @@ get_header(); ?>
 			<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>
+	</div>
+</section>
+
+<section>
+	<div class="container p-t-100 p-b-50">
+		<h2 class="float-border">MAIS VENDIDOS</h2>
+		<?php get_template_part('template-parts/content' , 'cursos-destaque') ?>
+	</div>
+</section>
+
+<section>
+	<div class="container p-t-50 p-b-50">
+		<h2 class="float-border">OUTROS CURSOS</h2>
+		<?php get_template_part('template-parts/content' , 'cursos') ?>
 	</div>
 </section>
 
@@ -46,7 +60,7 @@ get_header(); ?>
 				</div>
 				<?php endif; ?>
 			</div>
-			<div>
+			<div class="p-t-50">
 				<?php 
 				$images = get_field('imgs_funcs');
 				$size = 'full'; // (thumbnail, medium, large, full or custom size)
@@ -129,8 +143,25 @@ get_header(); ?>
 </div>
 </section>
 
-<div class="container p-t-50 p-b-50 faq text-center">
+<section>
+<div class="container p-t-100 p-b-100 faq text-center">
 	<h2>FAQ</h2>
+	<?php if( have_rows('faq') ): ?>
+		<ul class="faq-list p-t-50">
+	    <?php while ( have_rows('faq') ) : the_row(); ?>
+	    	<li>
+	    		<div class="click-faq d-flex">
+	    			<h3 class="w-90"><?php the_sub_field('pergunta'); ?></h3>	    		
+	    			<i class="fas fa-chevron-circle-down w-10"></i>
+	    		</div>
+	    		<div class="d-none">
+	    			<p><?php the_sub_field('resposta'); ?></p>
+	    		</div>
+	    	</li>
+		<?php  endwhile; ?>
+		</ul>
+	<?php endif; ?>
 </div>
+</section>
 
 <?php get_footer(); ?>

@@ -11,13 +11,7 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<section>
-		<?php if(!is_singular( 'post' ) && !is_page('Blog')){?>
-			<?php get_template_part( 'template-parts/content', 'noticias' ); ?>
-		<?php }?>   
-	</section>
+	</div><!-- #content -->	
 
 	<footer class="n-footer">
 		<div class="container text-center">
@@ -88,11 +82,11 @@
 		<div class="container">
 			<div class="social-footer text-right">							
 				<ul class="icons-social">
-					<li><a href="https://www.facebook.com/verdeghaia" target="_blank"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="https://www.linkedin.com/company/verde-ghaia/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://twitter.com/verdeghaia" target="_blank"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="https://plus.google.com/103021621222845476497" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="https://www.youtube.com/c/VerdeGhaia?sub_confirmation=1" target="_blank"><i class="fa fa-youtube"></i></a></li>
+					<li><a href="https://www.facebook.com/verdeghaia" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/verde-ghaia/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+					<li><a href="https://twitter.com/verdeghaia" target="_blank"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="https://plus.google.com/103021621222845476497" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+					<li><a href="https://www.youtube.com/c/VerdeGhaia?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a></li>
 					<!--a href="https://instagram.com/vgconsultoriaonline" target="_blank"><i class="fa fa-instagram"></i></a-->
 					<li><a href="javascript:void(0);" id="scroll" title="Ir para o topo"><span></span></a></li>
 				</ul>
