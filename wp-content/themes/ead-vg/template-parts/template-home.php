@@ -31,7 +31,7 @@ get_header(); ?>
 </section>
 
 <section>
-	<div class="container p-t-100 p-b-50">
+	<div class="container p-t-50 p-b-50">
 		<h2 class="float-border">MAIS VENDIDOS</h2>
 		<?php get_template_part('template-parts/content' , 'cursos-destaque') ?>
 	</div>

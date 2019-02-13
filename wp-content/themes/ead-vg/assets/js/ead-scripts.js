@@ -17,6 +17,7 @@ jQuery('.banner-home').slick({
     dots: true,
   	infinite: true,
   	autoplay: true,
+    autoplaySpeed: 8000,
 });
 
 jQuery('.click-faq').click(function() {

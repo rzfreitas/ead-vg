@@ -29,7 +29,7 @@
 							<div class="preco-curso"><?php echo $courses['price_course']; ?></div>
 						<?php endif; ?>
 					<div class="align-btn-bot">
-						<a class="btn btn-amarelo" href="<?php the_permalink(); ?>">Compre</a>
+						<a class="btn btn-amarelo" href="<?php echo $courses['link_course']; ?>">Compre</a>
 					</div>
 		  		</article>
 		  	</div>
@@ -38,6 +38,6 @@
 		<?php } ?>
 	</div>
 	<div class="p-t-50 text-center">
-		<a class="btn btn-laranja" href="">Veja mais cursos</a>
+		<a class="btn btn-laranja" href="https://ead.verdeghaia.com.br/courses">Veja mais cursos</a>
 	</div>
 </div>

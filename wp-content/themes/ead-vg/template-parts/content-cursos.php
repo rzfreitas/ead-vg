@@ -37,6 +37,6 @@
 		<?php } ?>
 	</div>
 	<div class="p-t-50 text-center">
-		<a class="btn btn-azul-off" href="">Veja mais cursos</a>
+		<a class="btn btn-azul-off" href="https://ead.verdeghaia.com.br/courses">Veja mais cursos</a>
 	</div>
 </div>
