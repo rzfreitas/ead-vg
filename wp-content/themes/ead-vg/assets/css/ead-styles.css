@@ -113,6 +113,7 @@ ul.banner-home li.slide:nth-child(4){
 .bg-azul{
 	background: #40A3C1;
 	color: #fff;
+    position: relative;
 }
 .box-w-round-t{
 	background: #fff;
@@ -258,6 +259,83 @@ ul.faq-list i{
 }
 /* / */
 
+/* PAGINA CURSO */
+.banner p{
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.box-orange{
+    background: #F2994A;
+    border-radius: 115px 0px;
+    color: #fff;
+    height: auto;
+    width: auto;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+     -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+}
+.box-floating{
+    position: absolute;
+    bottom: -75px;
+    top: -75px;
+    height: auto;
+    width: auto;
+}
+.box-orange h1{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.box-gray{
+    background: #F2F2F2;
+    padding: 20px;
+}
+.bg-yellow{
+    background: #F2C94C;
+    color: #333333;
+}
+ul.list-pa{
+    list-style: none;
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+}
+ul.list-pa li{
+    margin-bottom: 15px;
+}
+.box-white{
+    background: #fff;
+    color: #333;
+    border-radius: 50px 0px 0px 50px;
+    padding: 40px;
+}
+.balloon-blue{
+    background: #40A3C1;
+    border-radius: 119px;
+    color: #fff;
+    padding: 40px;
+    font-weight: bold;
+}
+.bg-mostarda{
+    background: #FFAA1C;
+}
+.balloon-white{
+    background: #fff;
+    border-radius: 119px;
+    color: #333;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+/* / */
+
 /* FOOTER */
 .title-blog-vg{
 	text-align: center;
@@ -269,7 +347,7 @@ ul.faq-list i{
 .n-footer {
 	background-color:#40A3C1;
 	color:#fff;
-	padding: 0 0 50px 0;
+	padding: 50px 0;
 }
 
 .block-links {
@@ -346,6 +424,9 @@ ul.faq-list i{
 	font-weight: bold;
 	cursor: pointer;
 }
+.btn-lg{
+    padding: 16px 32px;
+}
 .btn-amarelo{
 	background: #FFAA1C;
 	color: #fff;
@@ -375,9 +456,20 @@ ul.faq-list i{
     background: #fff;
     border: 2px solid #2F80ED;
 }
+.btn-pink{
+    background: #F36993;
+    font-size: 14px;
+}
+.pill-blue{
+    padding: 25px;
+    background: #40A3C1;
+    border-radius: 43px;
+    color: #fff;
+    display: inline-block;
+}
 a.btn-azul-off{color: #2F80ED}
 a.btn-laranja{color: #F2994A;}
-a.btn-amarelo, a.btn-azul-h, a.btn-azul{color: #fff;}
+a.btn-amarelo, a.btn-azul-h, a.btn-azul, a.btn-pink{color: #fff;}
 a.btn-branco{color: #2F80ED;}
 a.btn-amarelo:hover, a.btn-branco:hover{text-decoration: none;}
 /* / */
@@ -388,6 +480,7 @@ a.btn-amarelo:hover, a.btn-branco:hover{text-decoration: none;}
 .text-right{text-align: right;}
 .text-center{text-align: center;}
 .no-m{margin: 0}
+.no-p{padding: 0;}
 .p-relative{position: relative;}
 .p-l-15{padding-left: 15px;}
 .p-t-25{padding-top: 25px;}
@@ -407,6 +500,13 @@ a.btn-amarelo:hover, a.btn-branco:hover{text-decoration: none;}
 }
 .w-10{width: 10%;}
 .w-90{width: 90%;}
+.w-400{width: 400px;}
+.align-mid{
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.mg-center{margin:0 auto;}
 /* / */
 
 /* SLICK THEME */

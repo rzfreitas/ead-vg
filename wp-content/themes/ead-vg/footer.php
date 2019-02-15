@@ -15,7 +15,7 @@
 
 	<footer class="n-footer">
 		<div class="container text-center">
-			<img class="logo-footer" src="<?php echo get_template_directory_uri(); ?>/assets/imagens/logo-ead-footer.png" alt="logo footer ead vg">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/imagens/logo-ead-footer.png" alt="logo footer ead vg">
 			<p class="p-t-25 p-b-15">Av. Raja Gabaglia, nº 555, Cidade Jardim, <br> Belo Horizonte / MG – CEP: 30380-103</p>
 			<h3 class="no-m">(31) 2127-9137</h3>
 		</div>
