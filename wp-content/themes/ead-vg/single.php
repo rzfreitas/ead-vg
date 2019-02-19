@@ -15,7 +15,16 @@ get_header(); ?>
 			<div class="row">
 		  		<div class="col-12 col-md-4">
 		  			<div class="box-orange">
-		  				<h1><strong><?php the_title(); ?></strong></h1>
+		  				<h1 class="text-center"><strong><?php the_title(); ?></strong></h1>
+		  				<?php $qnts = get_field('qnt_c_curso'); 
+		  				if( $qnts ): ?>
+		  				<div class="list-qnts">
+		  					<div><i class="fas fa-video"></i><?php echo $qnts['videos']; ?> vídeos </div>
+		  					<div><i class="far fa-edit"></i><?php echo $qnts['provas']; ?> provas </div>
+		  					<div><i class="far fa-newspaper"></i><?php echo $qnts['textos']; ?> textos </div>
+		  					<div><i class="far fa-clock"></i><?php echo $qnts['horas']; ?> horas </div>
+		  				</div>
+		  				<?php endif; ?>
 		  			</div>
 		   		</div>
 		   		<div class="col-md-1"></div>
@@ -34,19 +43,21 @@ get_header(); ?>
 <section>
 	<div class="container p-t-50 p-b-50">
 		<div class="row">
-			<div class="col">
-				<p>SAIBA o qUE AS EMPRESAS PRECISAM FAZER PARA FORNECER ÁGUA POTÁVEL COM SEGURANÇA E QUALIDADE PARA SEUS COLABORADORES.</p>
-				<p><strong>VEJA O VÍDEO!</strong></p>
-				<div class="box-gray dp-flex">
-					<div><p>faça a primeira aula GRÁTIS</p></div>
-					<div>
-						<a class="btn btn-amarelo" href="">Clique AQUI</a>
+			<?php $t_v_utube = get_field('t_v_utube'); 
+		  	if( $t_v_utube ): ?>
+			<div class="col">				
+				<p><?php echo $t_v_utube['tx_t_v_utube']; ?></p>
+				<div class="box-gray align-mid dp-flex">
+					<div><p>Faça a primeira <br> aula GRÁTIS</p></div>
+					<div class="p-l-15">
+						<a class="btn btn-amarelo" href="<?php echo $t_v_utube['btn_t_v_utube']; ?>">Clique AQUI</a>
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				
+				<?php echo $t_v_utube['lk_t_v_utube']; ?>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
@@ -89,12 +100,28 @@ get_header(); ?>
 			<div class="row">
 				<?php $prof1 = get_field('profissional_1');
 				if( $prof1 ): ?>
-					<div class="col-md-4">
+					<div class="col-md-5">
 						<?php echo $prof1['texto_chamada_1']; ?>
 					</div>
-					<div class="col-md-8">
-						<img src="<?php echo $prof1['image']['url']; ?>" alt="<?php echo $prof1['image']['alt']; ?>" />
-						<?php echo $prof1['qualificacao_profissional']; ?>
+					<div class="col-md-7">
+						<img class="img-prof" src="<?php echo $prof1['foto_profissional']['url']; ?>" alt="<?php echo $prof1['foto_profissional']['alt']; ?>" />
+						<div class="balloon-prof">
+							<span><?php echo $prof1['qualificacao_profissional']; ?></span>
+						</div>				
+					</div>
+				<?php endif; ?>
+			</div>
+			<div class="row p-t-50">
+				<?php $prof2 = get_field('profissional_2');
+				if( $prof2 ): ?>
+					<div class="col-md-7">
+						<img class="img-prof" src="<?php echo $prof2['foto_profissional_2']['url']; ?>" alt="<?php echo $prof2['foto_profissional_2']['alt']; ?>" />
+						<div class="balloon-prof">
+							<span><?php echo $prof2['qualificacao_profissional_2']; ?></span>
+						</div>						
+					</div>
+					<div class="col-md-5">
+						<?php echo $prof2['texto_chamada_2']; ?>			
 					</div>
 				<?php endif; ?>
 			</div>
@@ -121,6 +148,60 @@ get_header(); ?>
 				<h2>O QUE VAI APRENDER COM O CURSO?</h2>
 			</div>
 		</div>
+		<div class="p-t-50">
+			<p><?php the_field('aprendizado_curso'); ?></p>
+		</div>
+		<div class="p-t-50">
+			<div class="square-black">
+				<div class="row dp-flex align-mid">
+					<div class="col-md-3">
+						<div class="box-orange">
+							<i class="far fa-file-alt"></i>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<h3>CONFIRA O CONTEÚDO PROGRAMÁTICO</h3>
+
+						<p>No curso <strong>EaD Verde Ghaia – <?php the_title(); ?></strong>, o tema é abordado de forma didática, interativa e contextualizada, utilizando vários materiais didáticos e mídias, para facilitar a compreensão do aluno.</p>
+						<div class="text-right">
+							<a class="btn btn-azul" id="leiaMais">Ver conteúdo</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-hide p-t-50">
+				<?php the_field('c_pragmatico'); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div>
+		<?php if( have_rows('slides_informativos') ): ?>
+			<div class="banner-info">
+			<?php while( have_rows('slides_informativos') ): the_row(); 
+				// vars
+				$title = get_sub_field('t_slide_inf');
+				$image = get_sub_field('img_inf');
+				$content = get_sub_field('c_slide_inf'); ?>
+
+				<div class="slide">
+					<div class="container p-t-50 p-b-50">
+						<div class="dp-flex">
+							<div class="w-60">
+								<h2><?php echo $title; ?></h2>
+								<p><?php echo $content; ?></p>							
+							</div>
+							<div class="w-40">
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+							</div>
+						</div>
+					</div>					
+				</div>
+			<?php endwhile; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </section>
 

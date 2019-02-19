@@ -46,7 +46,7 @@ get_header(); ?>
 
 <section>
 <div class="bg-plano">
-	<div class="container">		
+	<div class="container">
 		<div class="box-w-round-b">
 			<div class="row">
 				<?php $bloco_1 = get_field('bloco_1');

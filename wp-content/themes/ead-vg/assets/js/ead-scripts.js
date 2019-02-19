@@ -18,6 +18,13 @@ jQuery('.banner-home').slick({
   	infinite: true,
   	autoplay: true,
     autoplaySpeed: 8000,
+    lazyLoad: 'ondemand',
+});
+jQuery('.banner-info').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    lazyLoad: 'ondemand',
 });
 
 jQuery('.click-faq').click(function() {
