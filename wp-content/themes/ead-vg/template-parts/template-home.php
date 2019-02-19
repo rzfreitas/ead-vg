@@ -56,7 +56,7 @@ get_header(); ?>
 					<p><?php echo $bloco_1['conteudo_1']; ?></p>						
 				</div>			
 				<div class="col">
-					
+					<?php echo $bloco_1['video_1']; ?>
 				</div>
 				<?php endif; ?>
 			</div>
@@ -78,15 +78,14 @@ get_header(); ?>
 	</div>
 	<div class="container m-t-50">
 		<?php $bloco_2 = get_field('bloco_2');
-
 		if( $bloco_2 ): ?>
-			<div class="row box-w-round-t">			
+			<div class="row dp-flex box-w-round-t">			
 				<div class="col">
 					<h2 class="uppercase"><?php echo $bloco_2['titulo_2']; ?></h2>
 					<?php echo $bloco_2['conteudo_2']; ?>
 				</div>
-				<div class="col">
-					
+				<div class="col text-center">
+					<a class="v-center btn btn-lg btn-amarelo" href="https://ead.verdeghaia.com.br/courses">Começar agora</a>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -114,6 +113,7 @@ get_header(); ?>
 				</div>
 				<div class="text-hide p-t-50">
 					<?php echo $bloco_3['conteudo_3-4']; ?>
+					<a class="btn btn-branco" href="https://play.google.com/store/apps/details?id=com.eadbox&hl=pt">Baixar o app</a>
 				</div>
 			<?php endif; ?>
 		</div>
